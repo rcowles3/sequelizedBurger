@@ -20,7 +20,7 @@
     {{#each burger}} {{#if this.DEVOURED}}
     <li>
         {{this.BURGER_NAME}}
-        <form action="/{{this.id}}?_method=PUT" method="POST">
+        <form action="/{{this.id}}?_method=POST" method="POST">
         </form>
     </li>
     {{/if}} {{/each}}
