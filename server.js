@@ -32,13 +32,13 @@ app.set("view engine", "handlebars");
 // =============================================================
 // Routes
 // =============================================================
-// require("./routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 // require("./routes/html-routes.js")(app);
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgers_controllers.js");
+// var routes = require("./controllers/burgers_controllers.js");
 
-app.use("/", routes);
+// app.use("/", routes);
 
 // syncing our models with our database
 db.sequelize.sync().then(function() {
