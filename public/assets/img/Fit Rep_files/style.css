@@ -1,0 +1,8 @@
+.btn,
+.btn-primary {
+    width: 200px;
+    margin: 5px;
+    background-color: darkorange;
+}
+
+input {}
