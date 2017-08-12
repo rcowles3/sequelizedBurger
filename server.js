@@ -46,3 +46,5 @@ db.sequelize.sync().then(function() {
         console.log("Listening on port", PORT);
     });
 });
+
+console.log("update");
