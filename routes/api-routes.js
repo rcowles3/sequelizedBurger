@@ -29,13 +29,20 @@ module.exports = function(app) {
         var eatenBurger = {
             DEVOURED: 1
         }
-
-        db.burger.update(eatenBurger, {
-            where: {
-                id: req.params.id
-            }
-        }).then(function(allBurgers) {
-            res.redirect("/");
-        })
+        
+        console.log("REQUEST: \n\n", req);
+        console.log("REQUEST PARAMS: \n\n", req.params);
+        // if(err) throw err; // err catcher
+        
+        // db.burger.update(eatenBurger, {
+        //     where: {
+        //         id: req.params.id
+        //     }
+            
+            
+        // }).then(function(allBurgers) {
+        //     // res.redirect("/");
+        //     if(err) throw err; // err catcher
+        // })
     })
 }
