@@ -42,9 +42,9 @@ require("./routes/api-routes.js")(app);
 
 // syncing our models with our database
 db.sequelize.sync().then(function() {
-    app.listen(PORT, function() {
-        console.log("Listening on port", PORT);
-    });
+  app.listen(PORT, function() {
+    console.log("Listening on port", PORT);
+  });
 });
 
-console.log("update");
+// console.log("update");
