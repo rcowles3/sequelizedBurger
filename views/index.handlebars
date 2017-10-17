@@ -1,42 +1,72 @@
-<h1 class="text-center">Eat Da Burger!</h1>
-<div class="containter">
-    <span class="col-md-4">
-        <h2 class="text-center">Burgers not eaten!</h2>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <img src="/assets/img/burgerBanner.jpg"></img>
+</nav>
 
-        <ul>
+<div class="jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-2">Welcome To Bobs Burgers!</h1>
+        <h3>Come on in for the 'Burger of the Day,' or customize your own burger, made to order!</h3>
+      </div>
+</div>
+
+    <div class="container text-center">
+      <!-- Example row of columns -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7 card">
+          <h2 class="card-title">Order Here</h2>
+          <form class="create-update-form card-body" action="/" method="POST">
+              <div class="form-group">
+                  <label for="newBurger">Name of Burger:</label>
+                  <input type="text" id="newBurger" name="BURGER_NAME">
+              </div>
+              <button class="btn btn-primary" type="submit">Make Burger</button>
+          </form>
+        </div>
+        <div id="burgerOfDay" class="col-md-3">
+          <!-- <h2>Burger Of The Day!</h2> -->
+          <img src="/assets/img/burgerOfTheDay.jpg"></img>
+        </div>
+      </div>
+
+
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <span class="col-md-5 card align-content-center">
+        <h2 class="text-center card-title">Order Up!</h2>
+        <!-- <ul> -->
             {{#each burger}} {{#unless this.DEVOURED}}
-            <li>
+            <!-- <li> -->
                 {{this.id}}. {{this.BURGER_NAME}}
-                <form action="/{{this.id}}?_method=PUT" method="POST">
+                <form class="card-body" action="/{{this.id}}?_method=PUT" method="POST">
                     <input type="hidden" name="notDevoured" value="0">
-                    <button class="btn btn-primary" type="submit">Eat Me!</button>
+                    <button class="btn btn-primary" type="submit">Pick Up Burger</button>
                 </form>
-            </li>
+            <!-- </li> -->
             {{/unless}} {{/each}}
-        </ul>
+        <!-- </ul> -->
     </span>
-    <span class="col-md-4 text-center">
-        <img src="/assets/img/burger.png"></img>
-        <h2 class="text-center">Create A New Burger</h2>
-            <form class="create-update-form" action="/" method="POST">
-                <div class="form-group">
-                    <label for="newBurger">Name of Burger:</label>
-                    <input type="text" id="newBurger" name="BURGER_NAME">
-                </div>
-                <button type="submit">Make Burger</button>
-            </form>
-    </span>
-    <span class="col-md-4">
-        <h2 class="text-center">Burgers have eaten.</h2>
-            <ul>
+    <span class="col-md-5 card align-content-center">
+        <h2 class="text-center card-title">Burgers Served</h2>
+            <!-- <ul> -->
                 {{#each burger}} {{#if this.DEVOURED}}
-                <li>
-                    {{this.BURGER_NAME}}
-                    <form action="/{{this.id}}?_method=DELETE" method="POST">
-                    <button type="submit">Delete Burger</button>
+                <!-- <li> -->
+                  {{this.id}}. {{this.BURGER_NAME}}
+                    <form class="card-body" action="/{{this.id}}?_method=DELETE" method="POST">
+                    <button class="btn btn-primary" type="submit">Devour Burger</button>
                     </form>
-                </li>
+                <!-- </li> -->
                 {{/if}} {{/each}}
-            </ul>
+            <!-- </ul> -->
     </span>
+    </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="text-center">2017 Ryan Cowles &middot; Application Developed For Educational Purposes</p>
+        <br>
+        <p class="text-center"><a href="#">Back to top</a></p>
+    </footer>
 </div>

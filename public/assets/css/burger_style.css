@@ -1,7 +1,40 @@
 body {
-    background-color: orange;
+  background-color: rgba(220, 217, 140, 0.61);
 }
 
 img {
-    width: 200px;
+  width: 200px;
+}
+
+.jumbotron-fluid {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 710px;
+  color: #fff;
+}
+
+.display-2 {
+  padding-top: 200px;
+}
+
+.card {
+  background-color: rgb(118, 121, 130) !important;
+  border: 10px solid rgb(184, 83, 77) !important;
+  color: #bfc2c7 !important;
+  padding: 50px !important;
+  margin: 15px !important;
+}
+
+#burgerOfDay {
+  margin: 20px !important;
+}
+
+.btn,
+.btn-primary {
+  background-color: rgb(184, 83, 77) !important;
+  border-color: #000;
 }
